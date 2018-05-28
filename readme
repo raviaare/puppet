@@ -1,0 +1,17 @@
+
+puppet master:
+
+ wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb && \
+    sudo dpkg -i puppetlabs-release-trusty.deb && \
+    sudo apt-get update -yq && sudo apt-get upgrade -yq && \
+sudo apt-get install -yq puppetmaster
+
+
+puppet agent:
+
+  sudo apt-get install -yq puppet
+  
+  cat /etc/puppet/puppet.conf
+     
+    [agent]
+     server=puppet.example.com
